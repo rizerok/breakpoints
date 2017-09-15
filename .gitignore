@@ -1,0 +1,8 @@
+node_modules/**
+.idea/
+.DS_Store
+dist
+dev/compiled
+
+demo/handled/demo1/compiled
+demo/handled/demo2/compiled
