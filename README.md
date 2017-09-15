@@ -1,28 +1,40 @@
-webpack-config-library v1.0.0
+segment-breakpoints v1.0.0
 ===================
-my library config with webpack 3
+Library for work with js breakpoints.
 
-Install:
+Install via npm:
 -------------------
 ```sh
-git clone https://github.com/rizerok/webpack-3-config-library.git .
-npm i
+npm i segment-breakpoints --save
 ```
-
-Usage:
--------------------
-```npm run build:lib``` - build **lib source**
-
-```npm run build:prod``` - prepare lib for production and build README.md and .gitignore
-
-```npm run build:dev``` - build **lib source** and dev
-
-```npm run build:demo``` - build dynamic demo with **lib dist**
-
-```npm run watch:dev``` - develop lib with devServer
-
-```npm run watch:demo``` - develop dynamic demo with **lib dist** and devServer
-
-Dynamic demo:
--------------------
-Just add new directory, like demo1 or demo2, to **demo/handled/**
+js
+```javascript
+import SegmentBreakpoints from 'segment-breakpoints';
+const SegmentBreakpoints = new SegmentBreakpoints({
+    0:{
+        min:false,
+        in:fnc.b_in0x600,
+        out:fnc.b_out0x600
+    },
+    600:{
+        max:true,
+        min:false,
+        in:fnc.b_in600x700,
+        out:fnc.b_out600x700
+    },
+    },
+    1280:{
+        max:true,
+        min:false,
+        in:fnc.b_in1280x1440,
+        out:fnc.b_out1280x1440
+    },
+    },
+    1600:{
+        max:true,
+        min:false,
+        in:fnc.b_in1600,
+        out:fnc.b_out1600
+    }
+});
+```

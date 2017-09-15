@@ -3,7 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     output:{
-        library:'lib',
+        library:'SegmentBreakpoints',
         libraryTarget:'umd',
         libraryExport: 'default'
     },

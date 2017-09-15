@@ -36,7 +36,10 @@ module.exports = {
             },
             {
                 test:/\.js$/,
-                include:path.resolve('source','lib'),
+                include:[
+                    path.resolve('source','lib'),
+                    path.resolve('dev','source'),
+                ],
                 use:{
                     loader:'babel-loader',
                     options:{
