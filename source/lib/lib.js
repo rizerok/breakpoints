@@ -60,11 +60,14 @@ class SegmentBreakpoints{
 
                 mql.push(window.matchMedia(media));//add
 
-                if(mql[i].matches){//set first current
+                if(mql[i].matches){
+                    //set first current
                     this.currnet = br;
+                    //run first fn
+                    'in' in config[this.currnet] && config[this.currnet].in();
                 }
 
-                this.fnList[br] = e=>{ 
+                this.fnList[br] = e => {
                     if(e.matches){
                         'out' in config[this.currnet] && config[this.currnet].out();
                         'in' in config[br] && config[br].in();
