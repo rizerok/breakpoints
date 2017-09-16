@@ -1,6 +1,6 @@
 {
   "name": "segment-breakpoints",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for work with js breakpoints.",
   "main": "dist/lib.js",
   "module": "source/lib/lib.js",
