@@ -10,7 +10,7 @@ npm i segment-breakpoints --save
 js
 ```javascript
 import SegmentBreakpoints from 'segment-breakpoints';
-const SegmentBreakpoints = new SegmentBreakpoints({
+const sb = new SegmentBreakpoints({
     0:{
         min:false,
         in:fnc.b_in0x600,
@@ -22,13 +22,11 @@ const SegmentBreakpoints = new SegmentBreakpoints({
         in:fnc.b_in600x700,
         out:fnc.b_out600x700
     },
-    },
     1280:{
         max:true,
         min:false,
         in:fnc.b_in1280x1440,
         out:fnc.b_out1280x1440
-    },
     },
     1600:{
         max:true,
