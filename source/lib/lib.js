@@ -8,7 +8,7 @@ class SegmentBreakpoints{
         };
         this.config = config;
         //functions for listener
-        this.fnList = {};
+        this.fnList = [];
         //set min and max point for global
         if('max' in config){
             this.glbSegment.max = config.max;
@@ -67,7 +67,7 @@ class SegmentBreakpoints{
                     'in' in config[this.currnet] && config[this.currnet].in();
                 }
 
-                this.fnList[br] = e => {
+                this.fnList[i] = e => {
                     if(e.matches){
                         'out' in config[this.currnet] && config[this.currnet].out();
                         'in' in config[br] && config[br].in();
@@ -76,7 +76,7 @@ class SegmentBreakpoints{
                     }
                 };
 
-                mql[i].addListener(this.fnList[br]);
+                mql[i].addListener(this.fnList[i]);
                 return mql;
             },[]);
     }
@@ -86,10 +86,8 @@ class SegmentBreakpoints{
             isInclude?+name:+name-1;
     }
     destroy(){
-        console.log(Object.keys(this.config));
-        Object.keys(this.config).forEach(br=>{
-            console.log('this.mql',this.mql[br]);
-            this.mql[br].removeListener(this.fnList[br]);
+        Object.keys(this.config).forEach((br,i)=>{
+            this.mql[i].removeListener(this.fnList[i]);
         });
     }
 }
