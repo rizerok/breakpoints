@@ -12,7 +12,7 @@ let extractStylus = new ExtractTextPlugin({
 
 module.exports = {
     output:{
-        library:'lib',
+        library:'SegmentBreakpoints',
         libraryTarget:'umd',
         libraryExport: 'default'
     },
