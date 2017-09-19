@@ -1,4 +1,4 @@
-segment-breakpoints v1.1.1
+segment-breakpoints v1.1.4
 ===================
 Library for work with js breakpoints.
 
